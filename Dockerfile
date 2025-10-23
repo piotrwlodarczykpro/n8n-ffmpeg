@@ -1,7 +1,7 @@
-FROM n8nio/n8n:1.116.0-ubuntu
+# użyj wersji Alpine, która istnieje
+FROM n8nio/n8n:1.116.0-alpine
 
 USER root
-RUN apt-get update \
- && apt-get install -y --no-install-recommends ffmpeg \
- && rm -rf /var/lib/apt/lists/*
+# ffmpeg z repo Alpine (szybko i lekko)
+RUN apk add --no-cache ffmpeg bash
 USER node
