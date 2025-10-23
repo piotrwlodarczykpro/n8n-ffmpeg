@@ -1,0 +1,10 @@
+[phases.setup]
+# Doinstaluj ffmpeg do obrazu
+nixPkgs = ["ffmpeg"]
+
+[phases.install]
+# nic nie rób – n8n to już gotowy serwer, startujemy standardową komendą
+cmds = []
+
+[start]
+cmd = "n8n start"
