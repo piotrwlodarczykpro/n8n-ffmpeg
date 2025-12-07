@@ -13,7 +13,7 @@ RUN set -eux; \
     test -x /ffmpeg/ffmpeg && test -x /ffmpeg/ffprobe
 
 # Etap 2: właściwy obraz n8n (TAKIEJ wersji, jakiej używasz produkcyjnie)
-FROM n8nio/n8n:1.116.0
+FROM n8nio/n8n:1.122.5
 USER root
 COPY --from=ffmpeg-get /ffmpeg/ffmpeg  /usr/local/bin/ffmpeg
 COPY --from=ffmpeg-get /ffmpeg/ffprobe /usr/local/bin/ffprobe
